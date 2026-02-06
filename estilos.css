@@ -1,0 +1,86 @@
+body{
+    background: #e8e8ff;
+    font-family: Arial;
+}
+
+.contenedor{
+    width: 800px;
+    height: 420px;
+    margin: 60px auto;
+
+    background: white;
+    border-radius: 20px;
+
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* FORMULARIOS */
+
+.form{
+    width: 50%;
+    padding: 40px;
+    text-align: center;
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+
+    border: none;
+    background: #f1f1f1;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+input:focus{
+    transform: scale(1.05);
+}
+
+button{
+    width: 95%;
+    padding: 10px;
+
+    background: #6a11cb;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+p{
+    cursor: pointer;
+    color: #6a11cb;
+}
+
+/* PANEL MORADO */
+
+.panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(120deg, #6a11cb, #2575fc);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    left: 50%;
+    transition: 0.5s;
+}
+
+/* ANIMACIÓN AL CAMBIAR */
+
+.activo .panel{
+    left: 0;
+}
