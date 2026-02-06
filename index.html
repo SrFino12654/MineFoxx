@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login Minecraft</title>
+
+<style>
+
+/* ===== ESTILOS GENERALES ===== */
+
+body{
+    background: #e8e8ff;
+    font-family: Arial;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor{
+    width: 800px;
+    height: 420px;
+    margin: 60px auto;
+
+    background: white;
+    border-radius: 20px;
+
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* ===== FORMULARIOS ===== */
+
+.form{
+    width: 50%;
+    padding: 40px;
+    text-align: center;
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+
+    border: none;
+    background: #f1f1f1;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+input:focus{
+    transform: scale(1.05);
+    outline: none;
+}
+
+button{
+    width: 95%;
+    padding: 10px;
+
+    background: #6a11cb;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+p{
+    cursor: pointer;
+    color: #6a11cb;
+}
+
+/* ===== PANEL MORADO ===== */
+
+.panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(120deg, #6a11cb, #2575fc);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    left: 50%;
+    transition: 0.5s;
+}
+
+/* ANIMACIÓN */
+
+.activo .panel{
+    left: 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor" id="contenedor">
+
+    <!-- ===== LOGIN ===== -->
+    <div class="form login">
+        <h2>Iniciar Sesión</h2>
+
+        <input type="email" placeholder="Correo">
+        <input type="password" placeholder="Contraseña">
+
+        <button onclick="entrar()">Entrar</button>
+
+        <p onclick="cambiar()">¿No tienes cuenta? Regístrate</p>
+    </div>
+
+    <!-- ===== REGISTRO ===== -->
+    <div class="form registro">
+        <h2>Registrarse</h2>
+
+        <input type="text" placeholder="Nombre">
+        <input type="email" placeholder="Correo">
+        <input type="password" placeholder="Contraseña">
+
+        <button onclick="registrar()">Crear cuenta</button>
+
+        <p onclick="cambiar()">¿Ya tienes cuenta? Inicia sesión</p>
+    </div>
+
+    <!-- ===== PANEL ===== -->
+    <div class="panel">
+        <h2>Bienvenido a NauticMC</h2>
+        <p>Inicia sesión para entrar a la tienda</p>
+    </div>
+
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+
+<script>
+function cambiar(){
+    document.getElementById("contenedor").classList.toggle("activo")
+}
+
+function entrar(){
+    window.location.href = "tienda.html"
+}
+
+function registrar(){
+    alert("Cuenta creada correctamente")
+    window.location.href = "tienda.html"
+}
+</script>
+
+</body>
+</html>
